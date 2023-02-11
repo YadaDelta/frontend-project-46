@@ -2,7 +2,14 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "diff",
-  "main": "index.js",
+  "main": "bin/index.js",
+  "type": "module",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "simple-git-hooks": {
+    "pre-push": "make lint"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +24,15 @@
   },
   "homepage": "https://github.com/YadaDelta/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^10.0.0"
+    "commander": "^10.0.0",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.4.2"
   }
 }
